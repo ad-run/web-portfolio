@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/designSystem.css">
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="icon" href="../src/images/logo/ad_run_logo.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+        <script id="templateHB" type="text/x-handlebars-template">
+            <p class="sectionOne__left--label label text-yellow">{{projects.[0].label}}</p>
+            <h2 class="sectionOne__left--title text-white">{{projects.[0].name}}</h2>
+            <div class="sectionOne__left--text text-white">{{projects.[0].content}}</div>
+        </script>
+
+
+        <title>AD Web Portfolio - Projects - Sleep Debt Calculator</title>
+    </head>
+<body>
+    <div class="hero-calmness">
+        <div class="navbar container">
+            <div class="navbar__logo text-white">
+                <img src="..//src/images/logo/ad_run_logo.png" class="navbar__logo--image" alt="AD Web Development logo">
+                <div class="navbar__logo--text">AD Web Portfolio</div>
+            </div>
+            <div class="navbar__menu hidden text-white">
+                <a href="../index.html" class="navbar__menu--1">Home</a>
+                <a href="../projects.html" class="navbar__menu--2">Projects</a>
+                <a href="" class="navbar__menu--3">Services</a>
+                <a href="../contact.html" class="navbar__menu--4">Contact</a>
+            </div>
+            <div class="navbar__icons">
+                <i class="bi bi-list"></i>
+                <i class="bi bi-x-lg hide"></i>
+            </div>
+        </div>
+        
+    
+        <div class="sectionOne container grid">
+    
+            <div id="information" class="sectionOne__left flex">
+            </div>
+           
+            <img src="../src/images/Sleeping Debt/sleep_debt_calculator.jpeg" alt="" class="sectionOne__right responsive-image card">
+        </div>
+        </div>
+    
+
+
+<div class="container sectionTwo">
+    <div class="sectionTwo__content  text-center flex">
+            <div class ="sectionTwo__content--title subtitle text-darkblue">How Much Sleep Do You Need?</div> 
+            <div class="sectionTwo__content--text text-darkblue">Most healthy adults need at least <b>seven hours</b> of sleep each night. 
+                Infants, young children, and teenagers should get more sleep to support growth and development. Discovering how much sleep you truly need is the first step towards improving your health. Quantity isn't the only factor; quality matters too. 
+                Prioritize getting enough sleep each night to stay happy, healthy, and sharp.</div>
+            
+
+    </div>
+    <form id="sleepDebtCalculator">
+    
+            <label class="subtitle-4 text-darkblue" for="idealHours">Select the number of hours you need to sleep each night to feel rested and alert</label> 
+            <section class="sliderLine">
+                <input type="range" id="idealHours" name="idealHours" class="slider idealHours" min="7" max="16" step="1" value="8"
+                    oninput="rangeValue.innerText = this.value + ' hours'">
+                <p id="rangeValue" class=" subtitle-4"><span> 8 hours</span></p>
+            </section>
+   
+
+        <label class="subtitle-5" for="monday">How Many Hours of Sleep Did you get on Monday?</label>
+        <section class="sliderLine">
+            <input type="range" id="monday" name="monday" class="slider" min="0" max="16" step="1"
+                oninput="rangeValue1.innerText = this.value + ' hours'">
+            <p id="rangeValue1" class=" subtitle-4"><span> hours</span></p>
+        </section>
+    
+        <label class="subtitle-5 text-darkblue" for="tuesday">How Many Hours of Sleep Did you get on Thuesday?</label>
+    
+        <section class="sliderLine">
+            <input type="range" id="tuesday" name="tuesday" class="slider" min="0" max="16" step="1"
+                oninput="rangeValue2.innerText = this.value + ' hours'">
+            <p id="rangeValue2" class=" subtitle-4"><span> hours</span></p>
+        </section>
+
+        <label class="subtitle-5 text-darkblue" for="wednesday">How Many Hours of Sleep Did you get on Wednesday?</label>
+    
+        <section class="sliderLine">
+            <input type="range" id="wednesday" name="wednesday" class="slider" min="0" max="16" step="1"
+                oninput="rangeValue3.innerText = this.value + ' hours'">
+            <p id="rangeValue3" class=" subtitle-4"><span> hours</span></p>
+        </section>
+        <label class="subtitle-5 text-darkblue" for="thursday">How Many Hours of Sleep Did you get on Thursday</label>
+    
+        <section class="sliderLine">
+            <input type="range" id="thursday" name="thursday" class="slider" min="0" max="16" step="1"
+                oninput="rangeValue4.innerText = this.value + ' hours'">
+            <p id="rangeValue4" class=" subtitle-4"><span> hours</span></p>
+        </section>
+        <label class="subtitle-5 text-darkblue" for="friday">How Many Hours of Sleep Did you get on Friday?</label>
+    
+        <section class="sliderLine">
+            <input type="range" id="friday" name="friday" class="slider" min="0" max="16" step="1"
+                oninput="rangeValue5.innerText = this.value + ' hours'">
+            <p id="rangeValue5" class=" subtitle-4"><span> hours</span></p>
+        </section>
+        <label class="subtitle-5 text-darkblue" for="saturday">How Many Hours of Sleep Did you get on Saturday?</label>
+    
+        <section class="sliderLine">
+            <input type="range" id="saturday" name="saturday" class="slider" min="0" max="16" step="1"
+                oninput="rangeValue6.innerText = this.value + ' hours'">
+            <p id="rangeValue6" class=" subtitle-4"><span> hours</span></p>
+        </section>
+        <label class="subtitle-5 text-darkblue" for="sunday">How Many Hours of Sleep Did you get on Sunday?</label>
+    
+        <section class="sliderLine">
+            <input type="range" id="sunday" name="sunday" class="slider" min="0" max="16" step="1"
+                oninput="rangeValue7.innerText = this.value + ' hours'">
+            <p id="rangeValue7" class=" subtitle-4"><span> hours</span></p>
+        </section>
+        <button onclick="calculateSleepDebt()" class="yellow-button" type="button">Calculate Sleep</button>
+        <br>
+        <p class="subtitle-5" id="sleepHoursText" >Hours of Sleep You Got : <span id="totalSumSleep"></span></p>
+        <p class="subtitle-5"><span id="totalSum"></span></p>
+
+        <div class="text-dark subtitle-5 text-darkcyan" id="sleep">Congratulations! You are getting plenty of sleep each night. </div>
+        <div>
+
+        <img src="../src/images/Sleeping Debt/alienMoreSleep.svg" class="responsive-image" id="alienMoreSleep">
+
+        <img src="../src/images/Sleeping Debt/aliens-2029750.svg" class="responsive-image" id="alien">
+        
+    </div>
+    </form>
+    
+</div>
+<div class="container flex" id="sleepDebt">
+        <div class="subtitle text-center">Sleep Issues and Solutions</div>
+    
+        <div class="subtitle-4">Overview</div>
+        <p class="sleepDebt-text">According to the European Sleep Foundation (ESF), sleep is vital for maintaining good health and well-being.
+            However, many individuals in Europe face sleep issues that can impact their quality of life.</p>
+    
+        <div class="subtitle-4">Common Sleep Problems</div>
+        <p class="subtitle-5">The ESF identifies several common sleep problems:</p>
+        <ul class="sleepDebt-text">
+            <li>Insomnia: Difficulty falling asleep or staying asleep.</li>
+            <li>Snoring and Sleep Apnea: Breathing disruptions during sleep that can lead to poor sleep quality.</li>
+            <li>Restless Legs Syndrome (RLS): Uncomfortable sensations in the legs that can interfere with sleep.</li>
+            <li>Narcolepsy: Excessive daytime sleepiness and sudden sleep attacks.</li>
+        </ul>
+    
+        <div class="subtitle-4">Solutions</div>
+        <p class="subtitle-5">The ESF recommends the following strategies to improve sleep:</p>
+        <ol class="sleepDebt-text">
+            <li>Establishing a consistent sleep schedule.</li>
+            <li>Creating a relaxing bedtime routine.</li>
+            <li>Optimizing the sleep environment by keeping the bedroom cool, dark, and quiet.</li>
+            <li>Avoiding caffeine and electronic devices before bedtime.</li>
+            <li>Seeking medical help for persistent sleep problems.</li>
+        </ol>
+    
+        <p class="sleepDebt-text">For more information and resources, visit the <a href="https://www.europeansleepfoundation.ch/" class="text-darkcyan">European Sleep
+                Foundation</a> website.</p>
+</div>
+<div class="footer-wrap">
+    <div class="footer">
+        <div class="copyright text-white text-center">
+            <p>© 2024 AD Web Portfolio. All rights reserved</p>
+        </div>
+    </div>
+</div>
+<script src="../main.js"></script> 
+    <script src="sleepDebtCalculator.js"></script>
+</body>
+</html>

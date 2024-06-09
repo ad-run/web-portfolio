@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Meal maker</title>
+    <link rel="stylesheet" href="..//styles/designSystem.css">
+    <link rel="stylesheet" href="..//styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script id="templateHB" type="text/x-handlebars-template">
+        <div class="sectionTwo flex">
+    <div class="label text-blue text-center">{{label}}</div>  
+    <div class="title text-dark text-center">{{title}}</div>
+</div>
+{{#each dayDish}}
+{{#if this.left}}
+<div class="container grid">
+
+    <div class="flex">
+
+        <div class="subtitle left"> {{this.title}}</div>
+        <div class="text-blue subtitle-5 left">{{this.mealTime}}</div>
+
+        <div class="left"><span class="subtitle-5 left"> Ingredients:</span>
+            <ul id="list-no-bullet">
+                {{#each (splitIngredients this.ingredients)}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="left"><span class="subtitle-5">Instructions:</span>
+            <ul id="list-circle">
+                {{#each (splitinstructionsStep this.instructions)}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="flex">
+        <img src="{{this.image}}" alt="" class="responsive-image card">
+        <p class="label text-blue text-center">A {{this.taste}} {{this.title}}</p>
+        <i class="bi bi-clock text-blue"><span class="text">Preparation time: {{this.time}}</span></i>
+    </div>
+
+
+</div>
+
+{{else}}
+
+    <div class="container grid">
+    
+        <div class="flex">
+            <img src="{{this.image}}" alt="" class="responsive-image card">
+            <p class="label text-blue text-center">A {{this.taste}} {{this.title}}</p>
+            <i class="bi bi-clock text-blue"><span class="text">Preparation time: {{this.time}}</span></i>
+        </div>
+    
+        <div class="flex">
+    
+            <div class="subtitle left"> {{this.title}}</div>
+            <div class="text-blue subtitle-5 left">{{this.mealTime}}</div>
+    
+            <div class="left"><span class="subtitle-5"> Ingredients:</span>
+                <ul id="list-no-bullet">
+                    {{#each (splitIngredients this.ingredients)}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div><span class="subtitle-5"> Instructions:</span>
+                <ul id="list-circle">
+                    {{#each (splitinstructionsStep this.instructions)}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+
+    
+{{/if}}
+{{/each}}
+    </script>
+
+
+</head>
+<body>
+    <div class="hero">
+        <div class="navbar container">
+            <div class="navbar__logo text-white">
+                <img src="../src/images/mealMaker/meal_maker_logo.jpeg" class="navbar__logo--image" id="mealMakerLogo" alt="">
+                <div class="navbar__logo--text text-white">Meal Maker</div>
+                
+            </div>
+            <div class="navbar__menu hidden text-white">
+                <a href="../index.html" class="navbar__menu--1">Home</a>
+                <a href="../projects.html" class="navbar__menu--2">Projects</a>
+                <a href="" class="navbar__menu--3">Services</a>
+                <a href="" class="navbar__menu--4">Contact</a>
+            </div>
+            <div class="navbar__icons">
+                <i class="bi bi-list"></i>
+                <i class="bi bi-x-lg hide"></i>
+            </div>
+    
+        </div>
+   
+
+
+
+<div class="container grid">
+    
+    <div class="flex">
+        <div class="sectionOne__left--title title text-white left"> Meal maker</div>
+        <div class="text sectionOne__left--text left">Welcome to my home restaurant! Every dish tells a story of
+            tradition and flavor. Do you need ideas or inspiration for what to make for dinner today?
+            Try our a heartwarming meals that feels just like home – simple, delicious, and made with love. "Meal maker" generate a random meal and dessert from my home restaurant.
+            Check a meal and dessert for Today’s Special.</div>
+        <div class="subtitle-3 flex left" id="textForTodayMeal">Click to see today's special!</div>
+   
+            <div id="meal" class="left"></div>
+    
+            <div id="dessert" class="left"></div>
+    
+    
+            <div id="buttonContainer" class="mealToday-btn">
+                <button id="mealToday-btn" class="dark-btn">Let me see</button>
+            </div>
+    </div>
+    <img src="../src/images/mealMaker/meal_maker_logo.jpeg" alt="" class="responsive-image meal-maker-img card">
+</div> 
+
+</div> 
+
+<div class="background-mealMaker">
+<div id="mealInformation" class="container">
+
+</div>
+</div>
+
+ <script src="meal-maker.js"></script>  
+</body>
+</html>

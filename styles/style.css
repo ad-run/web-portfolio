@@ -1,0 +1,844 @@
+
+/*
+** ! style rules for sectionOne
+*/
+
+.sectionOne__left--text {
+    font-family: var(--font-2);
+    font-size: var(--body);
+    color: var(--color-white-75);
+    line-height: 1.7;
+}
+.sectionOne__left--btn {
+    font-family: var(--font-2);
+    align-self: start;
+    margin-top: 30px;
+}
+.sectionOne__left--btn a {
+    color: var(--color-white-75);
+}
+
+.card {
+    border-radius: 8%;
+    
+}
+.card img{
+ align-self: center;
+    
+}
+/*
+** ! style rules for sectionTwo
+*/
+.sectionTwo {
+    padding: 40px 0;
+    display: grid;
+    gap: 30px;
+}
+
+.sectionTwo__logo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px 8px;
+}
+.sectionTwo__logo img {
+    justify-self: center;
+    align-self: center;
+}
+[class ^="sectionTwo__logo--"] {
+    max-width: 40%;
+    height: auto;
+}
+#figma,
+#google,
+#codecademy,
+#youtube {
+    max-width: 80%;
+    height: auto;
+}
+.sectionTwo__content--text {
+    line-height: 1.7;
+    font-family: var(--font-2);
+    font-size: var(--body);
+}
+/*
+** ! style rules for sectionThree
+*/
+.sectionThree {
+    position: relative;
+    padding: 20px 0;
+    padding-top: 40px;
+    background-color: var(--color-yellow-25);
+}
+      
+.sectionThree__right-text {
+    color: var(--color-dark-75);
+    font-family: var(--font-2);
+    font-size: var(--body);
+}
+
+
+/*
+** ! style rules for sectionFour
+*/
+
+.sectionFour{
+    background-color: var(--color-yellow-25);
+}
+
+#more-info-1,
+#more-info-2,
+#more-info-3,
+#more-info-4,
+#more-info-5,
+#more-info-6,
+#more-info-7 {
+    display: none;
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px;
+    z-index: 3;
+    color: var(--color-white-100);
+    font-size: var(label);
+    border-radius: 8px;
+}
+
+#more-info-1 { 
+    background-color: var(--color-cyan-100);
+}
+#more-info-2 {
+    background-color: var(--color-darkcyan-100);
+}
+#more-info-3 {
+    background-color: var(--color-orange-100);
+}
+#more-info-4 {
+    background-color: var(--color-labelred-100);
+}
+#more-info-5 {
+    background-color: var(--color-textyellow-100);
+}
+#more-info-6 {
+    background-color: blueviolet;
+}
+#more-info-7 {
+    background-color: darkslateblue;
+}
+
+
+
+.item-1-title,
+.item-2-title,
+.item-3-title,
+.item-4-title,
+.item-5-title,
+.item-6-title,
+.item-7-title {
+    align-self: center;
+    z-index: 0;
+}
+
+.item-1-image,
+.item-2-image,
+.item-3-image,
+.item-4-image,
+.item-5-image,
+.item-6-image,
+.item-7-image {
+    align-self: center;
+    z-index: 0;
+}
+
+.item-1-title, 
+.item-3-title, 
+.item-5-title, 
+.item-7-title,
+.item-1-image,
+.item-3-image,
+.item-5-image,
+.item-7-image,
+.item-1-arrow, 
+.item-3-arrow,
+.item-5-arrow,
+.item-7-arrow {
+    justify-self: start;
+}
+.item-1-title, 
+.item-3-title, 
+.item-5-title, 
+.item-7-title {
+    justify-self: end;
+}
+
+.item-2-image,
+.item-4-image,
+.item-6-image,
+.item-2-arrow,
+.item-4-arrow,
+.item-6-arrow {
+    justify-self: end;
+}
+/* style rules for sectionFour grid titles*/
+.item-1-title {
+    grid-area: main-right-row1;  
+    color: rgb(42, 179, 203);
+}
+.item-2-title {
+    grid-area: main-left-row2;
+    color: darkcyan;
+}
+.item-3-title {
+    grid-area: main-right-row3;
+    color: rgb(240, 101, 41);
+}
+.item-4-title {
+    grid-area: main-left-row4;
+    color: rgb(227, 76, 38);
+}
+.item-5-title {
+    grid-area: main-right-row5;
+    color: rgb(216, 187, 57);
+}
+.item-6-title {
+    grid-area: main-left-row6;
+    color: blueviolet;
+}
+.item-7-title {
+    grid-area: main-right-row7;
+    color: darkslateblue;
+}
+/* style rules for sectionFour grid img*/
+.item-1-image {
+    grid-area: main-right-img-row1;
+}
+.item-3-image {
+    grid-area: main-right-img-row3;
+}
+.item-2-image {
+    grid-area: main-left-img-row2;
+}
+.item-4-image {
+    grid-area: main-left-img-row4;
+}
+.item-5-image {
+    grid-area: main-right-img-row5;
+}
+.item-6-image {
+    grid-area: main-left-img-row6;
+}
+.item-7-image {
+    grid-area: main-right-img-row7;
+}
+/* style rules for sectionFour grid arrows*/
+.item-1-arrow,
+.item-2-arrow,
+.item-3-arrow,
+.item-4-arrow,
+.item-5-arrow,
+.item-6-arrow,
+.item-7-arrow {
+
+    align-self: center;
+    z-index: 0;
+}
+.item-1-arrow {
+    grid-area: main-left-icon-row1;
+}
+.item-2-arrow {
+    grid-area: main-right-icon-row2;
+}
+.item-3-arrow {
+    grid-area: main-left-icon-row3;
+}
+.item-4-arrow {
+    grid-area: main-right-icon-row4;
+}
+.item-5-arrow {
+    grid-area: main-left-icon-row5;
+}
+.item-6-arrow {
+    grid-area: main-right-icon-row6;
+}
+.item-7-arrow {
+    grid-area: main-left-icon-row7;
+}
+
+.sectionFour__stages {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 25% 7% 3% 3% 7% 25% 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 16px;
+    grid-column-gap: 3px;
+    grid-template-areas:
+        ". main-right-row1 . main-left-icon-row1 . main-right-img-row1 . ."
+       ". . main-left-img-row2 . main-right-icon-row2 . main-left-row2 ."
+        ". main-right-row3 . main-left-icon-row3 . main-right-img-row3 . ." 
+        ". . main-left-img-row4 . main-right-icon-row4 . main-left-row4 ."
+        ". main-right-row5 . main-left-icon-row5 . main-right-img-row5 . ."
+        ". . main-left-img-row6 . main-right-icon-row6 . main-left-row6 ."
+        ". main-right-row7 . main-left-icon-row7 . main-right-img-row7 . .";
+}
+
+
+
+.sectionFour-button {
+    align-self: center;
+    justify-self: center;
+    margin-top: 40px;
+}
+
+/* Meal maker
+*/
+#mealMakerLogo{
+ border-radius: 12px;
+}
+.mealToday-btn {
+align-self: flex-start;
+}
+.meal-maker-img {
+ max-width: 70%;
+}
+#textForTodayMeal {
+    color: rgb(255, 228, 196);
+}
+#meal,
+#dessert {
+    color: bisque;
+    font-size: var(--h5);
+    text-indent: 5px;
+}
+.meal-list li{
+    color: var(--color-white-75);
+}
+#list-no-bullet{
+    list-style-type: none;
+}
+#list-circle {
+    list-style-type: circle;
+}
+.background-mealMaker {
+    background-color: rgba(255, 228, 196, 0.5);
+
+}
+.left {
+align-self: start;
+}
+
+/* 
+Style rules for Number Guesser
+*/
+
+
+.computer-icon {
+    max-width: 280px;
+    height: auto;
+}
+#computer-wins {
+   
+    font-size: 2rem; /* Adjust the size as needed */
+    color: #FFD700; /* Gold color for winnings */
+    font-weight: bold; /* Make it bold */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Adjust letter spacing */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.7); /* Add a glow effect */
+    margin: 10px 0; /* Add some margin */
+    text-align: center; /* Center the text */
+}
+
+.group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Specific styles for the score group */
+.score-group {
+    text-align: center;
+}
+
+/* Specific styles for the input group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.input-group .number {
+    margin-bottom: 0.5rem;
+}
+#game-heading {
+    display: grid;
+    grid-template-columns: 1.5fr 0.6fr 1fr;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.white-box,
+.white-box-75,
+.white-box-50 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ .white-box {
+    background-color: var(--color-white-25);
+}
+.white-box-75 {
+    background-color: var(--color-white-100);   
+}
+.white-box-50 {
+    background-color: var(--color-white-75);    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    min-height: fit-content;
+    margin: 0 auto;
+    align-items: stretch;
+}
+.grid-item-heading {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: start;
+    align-items: start;
+    padding: 0.5rem;
+}
+#round-number,
+#target-number {
+    margin-left: 5px; /* Add some space between the label and the number */
+}
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90%;
+
+}
+#game-content {
+    padding-bottom: 40px;
+}
+.number {
+    font-family: var(--font-futuristic);
+    font-size: var(--h6);
+    color: var(--color-white-100);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    outline: none;
+    text-align: center;
+    width: 100px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.number:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.7), 0 0 25px rgba(58, 123, 213, 0.7);
+}
+
+.number:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.7), 0 0 25px rgba(58, 123, 213, 0.7);
+}
+.number::-webkit-inner-spin-button,
+.number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.box {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ align-self: center;
+ justify-self: center;
+}
+
+
+.sectionThree__right-number-control-left,
+.sectionThree__right-number-control-right {
+    font-family: var(--font-futuristic);
+    font-size: var(--h6);
+    color: var(--color-white-100);
+    background: var(--color-cyan-100);
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sectionThree__right-number-control-left:hover,
+.sectionThree__right-number-control-right:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5), 0 0 20px rgba(58, 123, 213, 0.5);
+}
+
+/* Adjust alignment for number control buttons */
+.sectionThree__right-number-control {
+    display: flex;
+    gap: 1px;
+    padding-bottom: 20px;
+}
+.futuristic-title {
+    font-family: var(--font-futuristic);
+    font-size: var(--h3);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00d2ff;
+}
+.futuristic-subtitle,
+#computer-score,
+#computer-guess,
+#computer-wins,
+#human-score {
+    font-family: var(--font-futuristic);
+    font-size: var(--h4);
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 1px;
+}
+.futuristic-text {
+ font-family: var(--font-futuristic);
+ font-size: var(--body);
+ letter-spacing: 1px;
+}
+.futuristic-button {
+    font-family: var(--font-futuristic);
+    font-size: var(--h5);
+    color: var(--color-white-100);
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    align-self: center;
+    justify-self: center;
+}
+.futuristic-button:hover {
+ transform: scale(1.05);
+}
+
+#guess {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+#guess:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 65, 108, 0.7), 0 0 25px rgba(255, 75, 43, 0.7);
+}
+#next-round {
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    width: 300px;
+}
+#next-round:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.7), 0 0 25px rgba(58, 123, 213, 0.7);
+}
+
+
+@media (max-width: 1024px) {
+
+    .computer-icon {
+        max-width: 200px;
+        height: auto;
+    }
+
+.grid-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.grid-item {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.futuristic-title {
+    font-size: var(--h3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.futuristic-subtitle,
+#computer-score,
+#computer-guess,
+#computer-wins,
+#human-score {
+    font-size: var(--h5);
+    font-weight: 600;
+}
+
+.futuristic-text {
+    font-size: var(--body-mobile);
+}
+
+.futuristic-button {
+    font-size: var(--h6);
+    padding: 8px 12px;
+}
+#next-round {
+    padding: 12px 25px;
+    
+}
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+main {
+    padding-bottom: 10vh;
+}
+#game-heading {
+    padding-bottom: 0px;
+}
+    /* Adjust the size of the computer icon */
+    .computer-icon {
+        max-width: 120px;
+        height: auto;
+    }
+
+    /* Adjust padding and height for grid items */
+    .grid-item {
+        padding: 1rem;
+        height: auto; /* Adjust based on your design requirements */
+    }
+
+    /* Mobile flex container */
+    .mobile-flex {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Adjust the size of the futuristic title */
+    .futuristic-title {
+        font-size: var(--h4);
+    }
+
+    /* Adjust font size for text elements */
+    .futuristic-text,
+    #computer-score,
+    #computer-guess,
+    #computer-wins,
+    #human-score {
+        font-size: var(--body-mobile);
+    }
+
+    /* Adjust the size and padding of buttons */
+    .futuristic-button {
+        font-size: var(--body-mobile);
+        padding: 6px 12px;
+    }
+
+    /* Set width of the guess button */
+    #guess {
+        width: 120px;
+    }
+
+    /* Adjust the grid layout */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1fr, 1fr, 1fr); /* Auto-fit grid items */
+        gap: 10px; /* Adjust gap between items */
+   
+    }
+
+    /* Center align grid item headings */
+    .grid-item-heading {
+        text-align: center;
+        padding: 0;
+    }
+
+    /* White box styles */
+    .white-box {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        min-height: 180px;
+    }
+
+    /* Adjust white-box-75 styles */
+    .white-box-75 {
+        display: flex;
+        flex-direction: column; /* Adjusted to column for better readability */
+        justify-content: space-evenly;
+        padding: 10px;
+        min-height: 180px;
+    }
+
+    /* Adjust white-box-50 styles */
+    .white-box-50 {
+        display: flex;
+        flex-direction: column; /* Adjusted to column for better readability */
+        padding: 15px;
+        gap: 5px;
+        min-height: 180px;
+    }
+
+    /* Adjust font size of futuristic subtitle */
+    .futuristic-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Adjust font size of the number box */
+    .number.box {
+        font-size: 1.2rem;
+        width: 100px;
+    }
+
+    /* Adjust number control button styles */
+    .sectionThree__right-number-control-left,
+    .sectionThree__right-number-control-right {
+        font-size: 1.2rem;
+        padding: 4px 8px;
+    }
+    #game-content {
+        padding-bottom: 10px;
+    }
+}
+
+
+/* style rules for sleep dept calculator*/
+
+
+.hero-calmness {
+    background: linear-gradient(135deg, #192a56, #273c75);
+}
+
+#sleepDebtCalculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: auto 0;
+    background: linear-gradient(135deg, rgba(139, 225, 247, 0.979), rgba(206, 240, 253, 0.8)); /* Subtle gradient */
+   
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    
+}
+#sleeping {
+    max-width: 380px;
+    height: auto;
+    justify-self: center;
+}
+.slider, 
+.idealHours {
+    appearance: none; /* removes browser-specific styling */
+    width: 300px; /* width of slider */
+    height: 25px; /* height of slider */
+    outline: none; /* remove outline */
+    border-radius: 12px; /* round corners */
+}
+.slider {
+    background: var(--color-white-75);
+}
+.idealHours {
+    background: var(--color-yellow-100);
+}
+.slider::-webkit-slider-thumb {
+    appearance: none; /* removes browser-specific styling */
+    width: 20px; /* handle width */
+    height: 20px; /* handle height */
+    border-radius: 50%; /* make it circular */
+    background: var(--color-darkcyan-100);
+    cursor: pointer; /* cursor on hover */
+  }
+
+.sliderLine {
+ display: flex;
+ padding-top: 20px;
+ padding-bottom: 40px;
+ flex-direction: row;
+ gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .sliderLine {
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        flex-direction: column;
+        gap: 20px;
+       }
+       
+}
+
+@media (max-width: 568px) {
+
+}
+
+#sleepDebt {
+   padding: 30px;
+   color: var(--color-labelred-100);
+}
+#alienMoreSleep, 
+#alien {
+    width: auto;
+    height: 300px;
+    padding-top: 40px;
+}
+
+#sleep, 
+#sleepHoursText,
+#alienMoreSleep, 
+#alien
+ {
+    display: none;
+}
+#sleepDebt,
+.sleepDebt-text,
+li {
+    color: var(--color-dark-75);
+    line-height: 1.5;
+    font-family: var(--font-2);
+    font-size: var(--body);
+
+}
+
+.yellow-button {
+    background: linear-gradient(135deg, #f7d794, #f0a500); /* Gradient from light yellow to orange */
+    color: #192a56; /* Dark blue text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: var(--h5);
+    font-family: var(--font-2);
+    font-weight: 600;
+    transition: backround 0.3s, transform 0.2s;
+}
+
+.yellow-button:hover {
+    background: linear-gradient(135deg, #f0a500, #f7d794); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slight scale increase on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}

@@ -1,0 +1,36 @@
+let seima = {
+  nariai: {
+    tetis: {
+      vardas: "Valdas",
+      pavarde: "Drungilas",
+      megstamaFraze() {
+        console.log("Pochui!");
+      },
+    },
+    mama: {
+      vardas: "Aukse",
+      pavarde: "Drungiliene",
+      megstamaFraze() {
+        console.log("OK!");
+      },
+    },
+    "Vyr. sunus": {
+      vardas: "Vygantas",
+      pavarde: "Drungilas",
+      megstamaFraze() {
+        console.log("Bus gerai it taip!");
+      },
+    },
+    "Jaun. sunus": {
+      vardas: "Dovydas",
+      pavarde: "Drungilas",
+      megstamaFraze() {
+        console.log("As jau tau sakiau!");
+      },
+    },
+  },
+};
+
+for (const narys in seima.nariai) {
+  console.log(`${narys}: ${seima.nariai[narys].vardas}`);
+}

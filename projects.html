@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/designSystem.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="src/images/logo/AD-run logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script id="templateHB" type="text/x-handlebars-template">
+       
+        {{#each projects}}
+        {{#if this.finished}}
+        <img class="responsive-image card" src="{{this.image}}" alt="{{this.name}}">
+        <div class="flex">
+            <div class="label left">{{this.label}}</div>
+            <h2 class="subtitle left">{{this.name}}</h2>
+            <p class="text left">{{this.description}}</p>
+            <button onclick="location.href='{{this.link}}'" class="dark-btn sectionOne__left--btn" type="button">Check it out</button>
+        </div>
+        {{else}}
+        <img class="responsive-image card" src="{{this.image}}" alt="{{this.name}}">
+        <div class="flex">
+            <div class="label left">{{this.label}}</div>
+            <h2 class="text-blue left">{{this.name}}</h2>
+            <div class="text-pink left"> {{this.progress}}<i class="bi bi-hourglass-split">{{this.progressIcon}}</i></div>
+            
+        </div>
+        {{/if}}
+
+{{/each}}
+        
+    </script>
+    <title>AD Web Portfolio - Projects</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="navbar container">
+            <div class="navbar__logo text-white">
+                <img src="src/images/logo/ad_run_logo.png" class="navbar__logo--image" alt="">
+                <div class="navbar__logo--text">AD Web Portfolio</div>
+
+            </div>
+            <div class="navbar__menu hidden text-white">
+                <a href="index.html" class="navbar__menu--1">Home</a>
+                <a href="projects.html" class="navbar__menu--2">Projects</a>
+                <a href="#" class="navbar__menu--3">Services</a>
+                <a href="contact.html" class="navbar__menu--4">Contact</a>
+            </div>
+            <div class="navbar__icons">
+                <i class="bi bi-list"></i>
+                <i class="bi bi-x-lg hide"></i>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="information" class="container grid">
+    </div>
+    </div>
+    </div>
+    <div class="footer-wrap">
+        <div class="footer">
+            <div class="copyright text-white text-center">
+                <p>© 2024 AD-run All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+
+</html>

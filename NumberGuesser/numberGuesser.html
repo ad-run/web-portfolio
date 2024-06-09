@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guesser</title>
+    <link rel="stylesheet" href="..//styles/designSystem.css">
+    <link rel="stylesheet" href="..//styles/style.css">
+    <link rel="icon" href="..//src/images/logo/ad_run_logo.png">
+</head>
+<body>
+    <div class="hero-mystic">
+        <div class="navbar container">
+            <div class="navbar__logo text-white">
+                <a href="../index.html"><img src="../src/images/logo/ad_run_logo.png" class="navbar__logo--image"
+                        alt="adrun logo"></a>
+                <a href="../index.html">
+                    <div class="navbar__logo--text">AD Web Portfolio</div>
+                </a>
+            </div>
+            <div class="navbar__menu hidden text-white">
+                <a href="../index.html" class="navbar__menu--1">Home</a>
+                <a href="../projects.html" class="navbar__menu--2">Projects</a>
+                <a href="" class="navbar__menu--3">Services</a>
+                <a href="../contact.html" class="navbar__menu--4">Contact</a>
+            </div>
+            <div class="navbar__icons">
+                <i class="bi bi-list"></i>
+                <i class="bi bi-x-lg hide"></i>
+            </div>
+        </div>
+        <main>
+            <div class="container flex">
+                <!-- Game heading -->
+                <div class="grid-container" id="game-heading">
+                    <div class="grid-item-heading futuristic-title">Guess the Number</div>
+                    <div class="grid-item-heading futuristic-subtitle text-lightblue">Round <span id="round-number">1</span></div>
+                    <div class="grid-item-heading futuristic-subtitle text-lightblue">Target number: <span id="target-number">?</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="container flex">
+                <div class="grid-container" id="game-content">
+                    <div class="white-box flex grid-item">
+                        <div class="group score-group">
+                        <img class="responsive-image computer-icon" src="../src/images/number/computer.svg" alt="computer icon">
+                        <div class="futuristic-subtitle">Score: <span id="computer-score">0</span></div>
+                    </div>
+                        <div class="futuristic-subtitle text-center text-white" id="computer-guess">?</div>
+                        <div class="futuristic-subtitle text-pink" id="computer-wins"></div>
+                    </div>
+                    <div class="white-box-75 flex grid-item">
+                        <div class="group score-group">
+                            <img class="responsive-image computer-icon" src="../src/images/number/user.jpeg" alt="computer icon">
+                            <div class="futuristic-subtitle text-cyan">You</div>
+                            <div class="futuristic-subtitle">Score: <span id="human-score">0</span></div>
+                        </div>
+                        <div class="group input-group">
+                            <input class="number box text-center title" type="number" id="human-guess" min="0" max="9" step="1" value="0">
+                            <div class="sectionThree__right-number-control inline-flex">
+                                <div class="sectionThree__right-number-control-left" id="subtract">-</div>
+                                <div class="sectionThree__right-number-control-right" id="add">+</div>
+                            </div>
+                        </div>
+                        <button class="futuristic-button" id="guess">Make a Guess</button>
+                    </div>
+                    <div class="white-box-50 flex grid-item">
+                        <div class="futuristic-subtitle">Step 1</div>
+                        <div class="futuristic-text">Input a number between 0 and 9</div>
+                        <div class="futuristic-subtitle">Step 2</div>
+                        <div class="futuristic-text">Click "Make a Guess" to submit your guess and see who won the round.
+                        </div>
+                        <div class="futuristic-subtitle">Step 3</div>
+                        <div class="futuristic-text">Click "Next Round" to play again.</div>
+                    </div>
+                </div>
+                <!-- Button section -->
+                <div class="container flex">
+                    <button class="futuristic-button text-center" id="next-round">Next Round</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="footer-wrap">
+        <div class="footer">
+            <div class="copyright text-white text-center">
+                <p>© 2024 AD Web Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../main.js"></script>
+    <script src="script.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
